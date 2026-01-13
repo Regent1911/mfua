@@ -231,6 +231,12 @@ chmod +x myscript.sh
 bash myscript.sh
 ```
 
+или
+
+```shell
+sh myscript.sh
+```
+
 ## Примеры простых скриптов
 
 ### 1. Скрипт-приветствие
