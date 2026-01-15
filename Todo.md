@@ -32,7 +32,19 @@
 * [ ] Антивирусы
 * [ ] Брандмауэр
 * [ ] Сети
-* [ ] C++/Make/Cmake/gdb/Unit-тесты/strace/cppcheck/clang-tidy/valgrind/ldd/time/ulimit/stat
+* [ ] C++
+    * [ ] Make
+    * [ ] Cmake
+    * [ ] Gdb
+    * [ ] stat
+    * [ ] strace
+    * [ ] time
+    * [ ] ldd
+    * [ ] ulimit
+    * [ ] cppcheck
+    * [ ] clang-tidy
+    * [ ] valgrind
+    * [ ] Unit-тесты
 * [ ] Qt
 ```
 
