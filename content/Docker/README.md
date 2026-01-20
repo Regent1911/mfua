@@ -11,6 +11,10 @@
 - [drawDB](/content/Docker/drawDB.md)
 - []()
 
+Видео
+
+[Docker. Что это такое? | Docker для начинающих](https://rutube.ru/video/c405ceaf110c3d144a90a46f2694fc9d/)
+
 Документация
 
 - [Что такое Docker?](/content/Docker/ThatIsDocker.md)
