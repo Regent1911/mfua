@@ -3,13 +3,13 @@
 Практические примеры
 
 - [Быстрый старт](/content/Docker/Docker.md)
-- [Codespace](/content/Docker/Codespace.md)
+- [Codespace (в разработке)](/content/Docker/Codespace.md)
 - [Alt Linux в Docker](/content/Docker/AltInDocker.md)
 - [Metasploitable2](/content/Docker/Metasploitable2.md)
 - [MySQL + phpMyAdmin](/content/Docker/mySQLphpMyAdmin.md)
 - [PostgreSQL+pgAdmin](/content/Docker/PostgreSQL_pgAdmin.md)
 - [drawDB](/content/Docker/drawDB.md)
-- []()
+- [Joomla minimum](/content/Docker/joomla.md)
 - []()
 - []()
 
