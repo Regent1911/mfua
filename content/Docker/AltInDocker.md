@@ -1,4 +1,4 @@
-## Alt в Docker
+## Alt Linux в Docker
 
 #### Использовать контейнер с Alt
 

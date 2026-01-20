@@ -1,4 +1,4 @@
-## 🔍 Анализ ваших сетей
+## Docker-сети
 
 ```bash
 NETWORK ID     NAME                              DRIVER    SCOPE

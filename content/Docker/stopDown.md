@@ -1,4 +1,4 @@
-## 📊 Основное отличие
+## 📊 Основное отличие Stop от Down
 
 ### `docker compose stop`
 ```bash
