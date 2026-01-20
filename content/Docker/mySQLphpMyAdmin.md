@@ -7,7 +7,7 @@ mkdir mysql-phpmyadmin
 
 Переходим в папку проекта
 ```shell
-cd mysql-phpmyadmin/
+cd mysql-phpmyadmin
 ```
 
 Создаём и редактируем файл настроек композера
