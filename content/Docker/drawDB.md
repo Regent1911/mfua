@@ -18,5 +18,32 @@ cd drawdb/
 docker compose up -d
 ```
 
+### Удалить проект
+
+Остановить контейнер с удалением данных
+```shell
+docker compose down -v
+```
+
+Проверить, не запущен ли удаляемый контейнер
+```shell
+docker ps -a
+```
+
+и
+
+```shell
+docker compose ps -a
+```
+
+Получить id образа
+```shell
+docker images
+```
+
+Удалить образ
+```shell
+docker rmi 1b3a22d17cb6
+```
 
 [Открыть проект локально](http://localhost:5173/)

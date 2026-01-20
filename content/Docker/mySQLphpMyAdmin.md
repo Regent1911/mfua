@@ -117,12 +117,14 @@ docker compose ps
 
 Полезные команды
 
-### Перезапустить
-```shell
-docker compose restart
-```
-
 ### Просмотр логов в реальном времени
 ```shell
 docker compose logs -f mysql
+```
+
+`-f` в режиме ожидания (в режиме реального времени)
+
+### Перезапустить
+```shell
+docker compose restart
 ```
