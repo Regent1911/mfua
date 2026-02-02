@@ -95,6 +95,12 @@
     - Самостоятельно составить README.md с историей и описанием Docker и Docker Compose
     - Самостоятельно составить README.md по Dockerfile
     - Самостоятельно составить README.md по Docker Compose
+    - Docker
+        - Hello, World
+        - Nginx
+        - PostgreSQL
+    - Dockerfile
+        - python:3.9-slim+Flask
     - PostgreSQL+pgAdmin
     - mySQLphpMyAdmin
     - drawdb
