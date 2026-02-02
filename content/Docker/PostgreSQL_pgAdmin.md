@@ -13,7 +13,7 @@
     - Database: mydatabase
     - Username: myuser
     - Password: mypassword
-1. Показать таблицы: Servers -> Database -> Schemas -> Tables -> app_users -> Вверху нажать на значёк таблицы
+1. Показать таблицы: Servers -> Database -> Schemas -> Tables -> app_users -> Вверху нажать на значок таблицы
 
 > Осталось разобраться, как работать с БД в pgAdmin!
 

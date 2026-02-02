@@ -53,7 +53,6 @@ services:
       timeout: 20s
       retries: 10
       start_period: 40s
-
   # phpMyAdmin Web Interface
   phpmyadmin:
     image: phpmyadmin/phpmyadmin:latest
@@ -71,11 +70,9 @@ services:
     restart: unless-stopped
     networks:
       - db-network
-
 networks:
   db-network:
     driver: bridge
-
 volumes:
   mysql_data:
     driver: local
@@ -127,16 +124,64 @@ docker compose ps
 - Пользователь: `root`
 - Пароль: `rootpassword`
 
-Полезные команды
+### Управление проектом
 
-### Просмотр логов в реальном времени
+Проверить статус проекта
+```shell
+docker ps -a
+```
+
+Просмотр логов в реальном времени
 ```shell
 docker compose logs -f mysql
 ```
 
 `-f` в режиме ожидания (в режиме реального времени)
 
-### Перезапустить
+Перезапустить
 ```shell
 docker compose restart
+```
+
+Приостановить запущенный контейнер:
+```shell
+docker compose stop
+```
+
+Запустить приостановленный контейнер:
+```shell
+docker compose start
+```
+
+Показать конфигурацию текущего проекта:
+```shell
+docker compose config
+```
+
+Удалить проект
+
+Остановить контейнер с удалением данных
+```shell
+docker compose down -v
+```
+
+Проверить, не запущен ли удаляемый контейнер
+```shell
+docker ps -a
+```
+
+и
+
+```shell
+docker compose ps -a
+```
+
+Получить id образа
+```shell
+docker images
+```
+
+Удалить образ
+```shell
+docker rmi 1b3a22d17cb6
 ```
