@@ -27,6 +27,17 @@ cd mysql-phpmyadmin
 micro docker-compose.yml
 ```
 
+> Перед созданием проекта убедитесь, что порт 8081 не занят другим приложением!
+
+Посмотреть все проброшенные порты
+```shell
+docker ps --format "table {{.Names}}\t{{.Ports}}"
+```
+Или подробно для конкретного Docker-приложения
+```shell
+docker port my-website
+```
+
 Файл настроек композера
 ```yml
 services:

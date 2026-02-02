@@ -15,7 +15,16 @@
     - Password: mypassword
 1. Показать таблицы: Servers -> Database -> Schemas -> Tables -> app_users -> Вверху нажать на значок таблицы
 
-> Осталось разобраться, как работать с БД в pgAdmin!
+> Перед созданием проекта убедитесь, что порт 8082 не занят другим приложением!
+
+Посмотреть все проброшенные порты
+```shell
+docker ps --format "table {{.Names}}\t{{.Ports}}"
+```
+Или подробно для конкретного Docker-приложения
+```shell
+docker port my-website
+```
 
 создайте файл create-project.sh:
 
@@ -148,13 +157,6 @@ POSTGRES_PASSWORD=mypassword
 PGADMIN_EMAIL=admin@example.com
 PGADMIN_PASSWORD=admin
 EOF
-
-# Создаем README <<< С этого места какая-то проблема. Надо перепроверить на рабочем проекте!
-cat > $PROJECT_DIR/docs/README.md << 'EOF'
-# PostgreSQL + pgAdmin Stack
-
-## Запуск
-docker compose up -d
 ```
 
 запустите его в папке для контейнеров командой:
@@ -197,12 +199,9 @@ postgres-pgadmin-stack/
     └── connect-db.sh          # подключение к БД
 ```
 
-Запуск проекта
-```shell
-cd postgres-pgadmin-stack
-```
+[pgAdmin будет доступен по адресу](gAdmin: http://localhost:8082)
 
-запустить (перед этим остановите другой контейнер с PostgreSQL, если он есть)
+### Управление проектом
 
 остановить все контейнеры
 ```shell
