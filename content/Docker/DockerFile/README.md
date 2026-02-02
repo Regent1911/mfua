@@ -3,72 +3,58 @@
 ### Создание контейнера с приложением на Python с помощью Dockerfile
 
 1. Создайм bash скрипт `installPython_3_9.sh` для создания контейнера
+
+> Данный скрипт следует создать в отдельной папке Docker-проектов!
+
 ```shell
 #!/bin/bash
-# Создайте тестовое приложение
+# Тестовое приложение
 mkdir test-app && cd test-app
 
 # app.py
 cat > app.py << EOF
 from flask import Flask, jsonify
 import time
-
 app = Flask(__name__)
-
 # Имитация долгой инициализации
 print("Starting application...")
 time.sleep(2)  # Задержка 2 секунды для инициализации
 print("Application ready!")
-
 @app.route('/')
 def hello():
     return jsonify({"message": "Hello Docker!"})
-
 @app.route('/health')
 def health():
     return jsonify({"status": "healthy"}), 200
-
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=8000, debug=False)
 EOF
 
-# requirements.txt
+# requirements.txt (зависимости)
 echo "Flask==2.3.3" > requirements.txt
-
 # .dockerignore
 echo "__pycache__" > .dockerignore
-
-# Исправленный Dockerfile
+# Dockerfile
 cat > Dockerfile << 'EOF'
 FROM python:3.9-slim
-
 RUN apt-get update && apt-get install -y \
     gcc \
     curl \
     && rm -rf /var/lib/apt/lists/*
-
 RUN useradd -m -u 1000 appuser
 USER appuser
-
 WORKDIR /home/appuser/app
-
 COPY --chown=appuser:appuser requirements.txt .
 RUN pip install --no-cache-dir --user -r requirements.txt
-
 ENV PATH="/home/appuser/.local/bin:${PATH}"
-
 COPY --chown=appuser:appuser . .
-
 ENV PYTHONUNBUFFERED=1 \
     FLASK_APP=app.py \
     FLASK_ENV=production
-
 EXPOSE 8000
-
 # Увеличиваем start-period до 30 секунд
 HEALTHCHECK --interval=30s --timeout=10s --start-period=30s --retries=3 \
     CMD curl -f http://localhost:8000/health || exit 1
-
 CMD ["python", "app.py"]
 EOF
 
@@ -80,14 +66,53 @@ docker ps  # Проверяем статус
 curl http://localhost:8000/  # Тестируем
 ```
 
-Данный скрипт следует создать в отдельной папке Docker-проектов
-
 2. Запустить созданный скрипт:
 ```shell
 bash installPython_3_9.sh
 ```
 
 Скрипт создайт нужный каталог и файлы в нём, загрузит всё необходимое и сразу протестирует результат.
+
+# Работа с контейнером
+
+Проверка версии Python в контейнере
+```shell
+docker exec myapp-container python --version
+```
+
+Интерактивный терминал
+```shell
+docker exec -it myapp-container /bin/bash
+```
+
+Для alpine образов
+```shell
+docker exec -it myapp-container /bin/sh
+```
+
+Копирование файлов
+
+Из контейнера на хост
+```shell
+docker cp myapp-container:/app/logs.txt ./
+```
+
+С хоста в контейнер
+```shell
+docker cp ./config.yaml myapp-container:/app/
+```
+
+Проверка портов
+
+Какие порты проброшены
+```shell
+docker port myapp-container
+```
+
+Выйти из командной строки контейнера
+```shell
+exit
+```
 
 3. Мониторинг и информация
 
@@ -203,52 +228,6 @@ docker rm -f myapp-container
 ```
 
 Взаимодействие с контейнером
-
-# Запуск команд внутри контейнера
-
-Эта команда не понятна и не сработала!
-```shell
-docker exec myapp-container ls -la /app
-```
-
-Проверка версии Python в контейнере
-```shell
-docker exec myapp-container python --version
-```
-
-Интерактивный терминал
-```shell
-docker exec -it myapp-container /bin/bash
-```
-
-Для alpine образов
-```shell
-docker exec -it myapp-container /bin/sh
-```
-
-Копирование файлов
-
-Из контейнера на хост
-```shell
-docker cp myapp-container:/app/logs.txt ./
-```
-
-С хоста в контейнер
-```shell
-docker cp ./config.yaml myapp-container:/app/
-```
-
-Проверка портов
-
-Какие порты проброшены
-```shell
-docker port myapp-container
-```
-
-Выйти из командной строки контейнера
-```shell
-exit
-```
 
 Управление образом myapp
 

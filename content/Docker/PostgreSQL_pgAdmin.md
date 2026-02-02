@@ -199,6 +199,14 @@ postgres-pgadmin-stack/
     └── connect-db.sh          # подключение к БД
 ```
 
+Проверяем
+```shell
+docker ps
+```
+```shell
+curl http://localhost:8082
+```
+
 [pgAdmin будет доступен по адресу](gAdmin: http://localhost:8082)
 
 ### Управление проектом

@@ -123,6 +123,16 @@ EOF
 docker compose up -d
 ```
 
+Проверяем
+```shell
+docker ps
+```
+
+и
+```shell
+curl http://localhost:8082
+```
+
 Проверка состояния
 ```shell
 docker compose ps
