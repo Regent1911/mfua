@@ -13,7 +13,7 @@
 - [Обеспечение качества функционирования компьютерных систем](/content/Ensuring_quality_computer_systems_functioning/README.md)
 - [Поддержка и тестирование программных модулей](/content/SupportAndTesting_of_software_modules/)
 
-[Минимальные и рекомендуемые технические требования для рабочего места студента](https://gitflic.ru/project/rurewa/cpp/file?branch=master)
+[Минимально-рекомендуемые технические требования для рабочего пространства студента](https://gitflic.ru/project/rurewa/cpp/file?branch=master)
 
 ## Навигация по документу
 
