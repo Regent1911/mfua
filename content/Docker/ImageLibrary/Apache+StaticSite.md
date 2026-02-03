@@ -20,4 +20,4 @@ docker run -d \
   httpd:alpine
 ```
 
-[Откройте:](http://localhost:8081)
+[Откройте: http://localhost:8081](http://localhost:8081)

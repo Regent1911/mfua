@@ -11,7 +11,7 @@ docker run -d \
   adminer:latest
 ```
 
-[Откройте: ](http://localhost:8080)
+[Откройте: http://localhost:8080](http://localhost:8080)
 
 Система:
     - PostgreSQL,
