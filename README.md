@@ -106,13 +106,12 @@ git config --global user.email "rurewa@mail.ru"
 
 [Основные команды для WSL](https://learn.microsoft.com/ru-ru/windows/wsl/basic-commands)
 
-### Docker (Разработка, тестирование и запуск различтоного ПО)
+### Docker (Разработка, тестирование и запуск различного ПО)
 
 1. [Загрузить и установить Docker-Desktop](https://www.docker.com/products/docker-desktop/)
 1. Выполнять авторизацию в **Docker-Desktop** (можно через Google), указать `personal`;
 1. Перезагрузить компьютер;
 1. Запустить **Docker Desktop** (можно добавить в автозагрузку для удобства);
-1. В **Powershell** выполнить ```docker images``` для показа установленных образов;
 1. Установить и запустить тестовый контейнер ```docker run hello-world```
 
 [Уроки по **Docker** для начинающих](/content/Docker/README.md)
