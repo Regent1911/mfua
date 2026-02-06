@@ -1,6 +1,7 @@
 ## Моя коллекция готовых Docker-образов из разных хабов
 
 1. [Docket Hub](/content/Docker/ImageLibrary/DockerHub.md)
+1. [Welcome to Docker](/content/Docker/ImageLibrary/WelcomeToDocker.md)
 1. [Adminer (замена phpMyAdmin)](/content/Docker/ImageLibrary/Adminer.md)
 1. [Alt Linux в Docker](/content/Docker/ImageLibrary/AltInDocker.md)
 1. [Статический сайт на Apache](/content/Docker/ImageLibrary/Apache+StaticSite.md)
