@@ -104,6 +104,11 @@ docker ps
 docker ps -a
 ```
 
+Показать загруженные Docker-образы
+```shell
+docker images
+```
+
 Показать детальную информацию по выбранному образу
 ```shell
 docker image inspect hello-world
@@ -432,6 +437,7 @@ docker rm $(docker ps -aq)
 
 #### Контейнеры
 
+Удалить только остановленные контейнеры
 ```shell
 docker container prune
 ```
@@ -467,13 +473,15 @@ docker stop $(docker ps -q)
 docker image prune
 ```
 
-Удалить все неиспользуемые образы (те, на которые нет ссылок)
-```shell
-docker image prune
-```
 С подтверждением перед удалением
 ```shell
 docker image prune -a
 ```
 
 > На вопрос "Are you sure you want to continue?" ответьте 'y'
+
+
+Удалить все образы
+```shell
+docker rmi -f $(docker images -q)
+```
