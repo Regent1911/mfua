@@ -4,16 +4,17 @@
 
 - [Bash](/content/Bash/README.md)
 - [Git](/content/Git/README.md)
-- [Markdown](Markdown.md)
+- [Markdown](/content/Markdown.md)
 - [Mermaid](/content/Mermaid/README.md)
 - [Docker](/content/Docker/README.md)
+- [Практические задания](/content/StudentPracticalsLabs/README.md)
 - [Инструментальные средства разработки ПО](/content/SoftwareDevelopmentTools/README.md)
 - [Информационные технологии](/content/IT/README.md)
 - [Основы проектирования баз данных](/content/Basics_database_design/README.md)
 - [Обеспечение качества функционирования компьютерных систем](/content/Ensuring_quality_computer_systems_functioning/README.md)
 - [Поддержка и тестирование программных модулей](/content/SupportAndTesting_of_software_modules/)
 
-[Минимальные и рекомендуемые технические требования для рабочего пространства современного студента](https://gitflic.ru/project/rurewa/cpp/file?branch=master)
+[Минимальные и рекомендуемые технические требования для рабочего пространства современного it-студента](https://gitflic.ru/project/rurewa/cpp/file?branch=master)
 
 ## Навигация по документу
 
@@ -22,8 +23,8 @@
 - [Docker](#docker)
 - [Virtual Box (Для организации контроллера домена)](#virtual-box-для-организации-контроллера-домена)
 - [Минимальные настройки VSCode](#минимальные-настройки-vscode)
-- [Вопросы к экзамену](#вопросы-к-экзамену)
 - [Рекомендуемые навыки и умения](#рекомендуемые-навыки-и-умения)
+- [Вопросы к экзамену](#вопросы-к-экзамену)
 
 **Минимальные требования к студентам:**
 
@@ -31,7 +32,7 @@
 1. Для изучения **IT** технологий лучше использовать какой-нибудь **Linux**, например [Альт Образование 11](https://www.basealt.ru/alt-education)
 1. Для пользователей **Linux** [инструкция по получению и настройке Альт Линукс Образование 11](/content/Linux/README.md)
 1. Для пользователей **Windows 10/11**
-1. Проверить у себя в **PowerShell** установленные **WinGet** командой `winget --info`, если не установлен, то:
+1. Для установки приложений в Windows рекомендуется использовать [**WinGet**](https://learn.microsoft.com/ru-ru/windows/package-manager/winget/)! Проверить у себя в **PowerShell** установленный **WinGet** командой `winget --info`. Если не установлен, то:
     - Установить [WinGet (Windows Package Manager)](https://apps.microsoft.com/detail/9nblggh4nns1?hl=ru-RU&gl=RU) или [с Github](https://github.com/microsoft/winget-cli/releases)
 1. Приложение [Teams](https://teams.microsoft.com/v2/) или браузер [Edge](https://www.microsoft.com/ru-ru/edge/download?form=MA13FW) или в **PowerShell** - `winget install Microsoft.Teams` и `winget install Microsoft.Edge`
 1. **Git** (Git-Bash) [Git-Bash](https://git-scm.com/) или в **PowerShell** - `winget install Git.Git`
@@ -57,7 +58,7 @@
 
 Открыть **Powersheell** или **Git-Bash**
 
-Выбрать текстовый редактор Nano по умолчанию
+Выбрать текстовый редактор **Nano** по умолчанию
 ```shell
 git config --global core.editor "nano"
 ```
@@ -65,21 +66,21 @@ git config --global core.editor "nano"
 Представиться системе **Git**:
 
 ```shell
-git config --global user.name "Rurewa"
+git config --global user.name "Rosa"
 ```
 
-> где вместо **Rurewa** - ваш **username**
+> где вместо **Rosa** - ваш **username**
 
 ```shell
-git config --global user.email "rurewa@mail.ru"
+git config --global user.email "rosa@mail.ru"
 ```
 
-> где вместо `rurewa@mail.ru` - ваша почта
+> где вместо `rosa@mail.ru` - ваша почта
 
 ### [Подробней о Git >>>](/content/Git/README.md)
 
 
-### WSL 2.0 для Windows 10 (для работы с Docker etc.)
+### WSL 2.0 для Windows 10/11 (для работы с Docker etc.)
 
 Проверить поддержку **CPU** виртуализации на вашем оборудовании
 
@@ -123,7 +124,7 @@ git config --global user.email "rurewa@mail.ru"
 1. Запустить **Docker Desktop** (можно добавить в автозагрузку для удобства);
 1. Установить и запустить тестовый контейнер `docker run hello-world`
 
-> Если компьютер не тянет в **WSL 2.0** и **Docker**, то можно попробовать выполнять задачи в Codespace (но не желательно, т.к. очень ограниченный функционал!)
+> Если компьютер не тянет в **WSL 2.0** и **Docker**, то можно ограничется [Codespace](https://github.com/features/codespaces) (но не желательно, т.к. очень ограниченный функционал!)
 
 [Уроки по **Docker** для начинающих](/content/Docker/README.md)
 
@@ -191,7 +192,7 @@ inxi -F
 
 Установка расширений
 
-> ### РКН pаблокировал расширения для VS Code!
+> ### РКН заблокировал расширения для VS Code!
 
 Временное решение:
 - [Открываем сайт загрузчика расширений https://vsix.2i.gs/](https://vsix.2i.gs/)
@@ -222,7 +223,7 @@ inxi -F
 1. Эффективная работа с текстом (важные клавиатурные сокращения)
 1. Технический английский [Золотой плейлист А. Бербис](https://vkvideo.ru/playlist/-227037029_21?ysclid=mictnz3gl4831947556)
 1. Читать тематические группы в Телеграм
-1. Git+Markdown
+1. Git+Markdown+Mermaid+Docker+CI/CD
 
 ## Вопросы к экзамену
 
@@ -231,7 +232,6 @@ inxi -F
 [Вопросы к экзамену по дисциплине «ПОДДЕРЖКА И ТЕСТИРОВАНИЕ ПРОГРАММНЫХ МОДУЛЕЙ»](/content/SupportAndTesting_of_software_modules/questions.md)
 
 [Вопросы к экзамену по дисциплине «ОБЕСПЕЧЕНИЕ КАЧЕСТВА ФУНКЦИОНИРОВАНИЯ КОМПЬЮТЕРНЫХ СИСТЕМ»](/content/Ensuring_quality_computer_systems_functioning/questions.md)
-
 
 [Вопросы к экзамену по дисциплине "Инструментальные средства разработки ПО"](/content/SoftwareDevelopmentTools/questions.md)
 
