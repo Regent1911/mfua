@@ -1,4 +1,4 @@
-#!/usr/bin/env pwsh
+﻿#!/usr/bin/env pwsh
 # PowerShell скрипт для синхронизации репозиториев
 
 # Настройки кодировки
