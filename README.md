@@ -123,6 +123,7 @@ git config --global user.email "rosa@mail.ru"
 1. Перезагрузить компьютер;
 1. Запустить **Docker Desktop** (можно добавить в автозагрузку для удобства);
 1. Установить и запустить тестовый контейнер `docker run hello-world`
+1. Если `docker run hello-world` не срабатывает, то в Ubuntu выполните `sudo service docker restart`
 
 > Если компьютер не тянет в **WSL 2.0** и **Docker**, то можно ограничется [Codespace](https://github.com/features/codespaces) (но не желательно, т.к. очень ограниченный функционал!)
 
