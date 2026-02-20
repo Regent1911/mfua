@@ -4,11 +4,11 @@ setlocal enabledelayedexpansion
 
 REM === Настройки ===
 REM  BASE_DIR - каталог, где лежат репозитории
-set "BASE_DIR=D:\_Regent\Education"
+set "BASE_DIR=E:\_Regent\Education"
 set "DONOR_DIR=from_rurewa\mfua"
 set "RECIP_DIR=local_rurewa\mfua"
-set "DONOR_URL=https://gitflic.ru/project/rurewa/mfua"
-set "RECIP_URL=https://github.com/Regent1911/mfua"
+set "DONOR_URL=https://gitflic.ru/project/rurewa/mfua.git"  :: Добавлен .git в конце
+set "RECIP_URL=https://github.com/Regent1911/mfua.git"      :: Добавлен .git в конце
 
 title Тянем изменения репозиториев
 color 0A
@@ -30,9 +30,18 @@ if errorlevel 1 (
 echo [1/7] Проверяю каталоги...
 if not exist "%BASE_DIR%\%DONOR_DIR%\.git" (
     echo   Клонирую репозиторий донор...
+    echo   URL: %DONOR_URL%
     git clone "%DONOR_URL%" "%BASE_DIR%\%DONOR_DIR%"
     if errorlevel 1 (
+        echo.
         echo ОШИБКА: Не удалось клонировать репозиторий донора
+        echo.
+        echo Попробуйте вручную проверить доступность репозитория:
+        echo   1. Откройте браузер и перейдите по ссылке:
+        echo      https://gitflic.ru/project/rurewa/mfua
+        echo   2. Проверьте, существует ли такой репозиторий
+        echo   3. Возможно, репозиторий приватный или требует авторизации
+        echo.
         pause
         exit /b 1
     )
@@ -42,6 +51,7 @@ if not exist "%BASE_DIR%\%DONOR_DIR%\.git" (
 
 if not exist "%BASE_DIR%\%RECIP_DIR%\.git" (
     echo   Клонирую репозиторий реципиент...
+    echo   URL: %RECIP_URL%
     git clone "%RECIP_URL%" "%BASE_DIR%\%RECIP_DIR%"
     if errorlevel 1 (
         echo ОШИБКА: Не удалось клонировать репозиторий реципиент
@@ -55,8 +65,8 @@ if not exist "%BASE_DIR%\%RECIP_DIR%\.git" (
 echo.
 echo [2/7] Обновляю репозиторий донор...
 cd /d "%BASE_DIR%\%DONOR_DIR%"
-git fetch origin
-git pull origin master
+git fetch
+git pull
 if errorlevel 1 (
     git pull origin main
     if errorlevel 1 (
