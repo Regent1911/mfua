@@ -65,25 +65,39 @@ psql -h localhost -p 5432 -U myuser -d mydb
 ```bash
 # Просмотр логов
 docker logs postgres
+```
+
 ![alt text](image-2.png)
+
+```bash
 # Подключение к bash внутри контейнера
 docker exec -it postgres bash
+```
+
 ![alt text](image-3.png)
+
+```bash
 # Резервное копирование БД
+
 docker exec -t postgres pg_dump -U myuser mydb > backup.sql
 
 # Восстановление из бэкапа
+
 cat backup.sql | docker exec -i postgres psql -U myuser -d mydb
 
 # Остановка
+
 docker stop postgres
 
 # Удаление (с сохранением тома)
+
 docker rm postgres
 
 # Полное удаление (включая том)
+
 docker rm -v postgres
 docker volume rm postgres_data
+
 ```
 
 ## Подключение и основные команды psql
