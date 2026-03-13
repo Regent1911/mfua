@@ -1,4 +1,4 @@
-```markdown
+
 # Welcome to Docker
 
 ## Попробуем
@@ -26,5 +26,3 @@ docker run -d -p 8088:3000 --name welcome-to-docker welcome-to-docker
 ![alt text](image-2.png)
 Откройте в браузере:
 <http://localhost:8088>
-
-```

@@ -1,4 +1,3 @@
-```markdown
 # MongoDB в Docker
 
 ## О проекте
@@ -24,7 +23,6 @@ docker run -d \
 ### Что означают аргументы
 
 | Аргумент | Описание |
-|----------|----------|
 | `-p 27017:27017` | Стандартный порт MongoDB |
 | `-e MONGO_INITDB_ROOT_USERNAME` | Имя администратора |
 | `-e MONGO_INITDB_ROOT_PASSWORD` | Пароль администратора |
@@ -62,7 +60,9 @@ db.users.find()
 // Выйти
 exit
 ```
+
 ![alt text](image-2.png)
+
 ## Полезные команды
 
 ```bash
@@ -75,7 +75,9 @@ docker exec mongodb mongorestore -u admin -p secret /tmp/backup
 # Копирование бэкапа на хост
 docker cp mongodb:/tmp/backup ./backup
 ```
+
 ![alt text](image-5.png)
+
 ## Для разработки (без аутентификации)
 
 ```bash
@@ -96,5 +98,3 @@ docker run -d \
 ```
 
 Доступ: <http://localhost:8081>
-
-```

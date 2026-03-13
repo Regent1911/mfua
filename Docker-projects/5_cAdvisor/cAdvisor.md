@@ -1,4 +1,3 @@
-```markdown
 # cAdvisor (Container Advisor)
 
 ## О проекте
@@ -28,11 +27,12 @@ docker run -d \
   --detach=true \
   gcr.io/cadvisor/cadvisor:latest
 ```
+
 ![alt text](image.png)
+
 ### Что означают аргументы
 
 | Аргумент | Описание |
-|----------|----------|
 | `-d` | Запуск в фоновом режиме |
 | `--name=cadvisor` | Имя контейнера |
 | `-p 8080:8080` | Проброс порта (веб-интерфейс) |
@@ -43,10 +43,12 @@ docker run -d \
 
 ## Проверка работы
 
-```
+```url
 http://localhost:8080
 ```
+
 ![alt text](image-1.png)
+
 ## Что можно увидеть в интерфейсе
 
 - **CPU** — использование процессора (общее, по ядрам, user/system)
@@ -85,5 +87,3 @@ curl http://localhost:8080/metrics
 - В Kubernetes cAdvisor встроен в kubelet
 - Для RedHat/CentOS может потребоваться `--privileged=true`
 - Debian может требовать включения memory cgroup
-
-```

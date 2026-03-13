@@ -1,4 +1,4 @@
-```markdown
+
 # Portainer
 
 Portainer — это веб-интерфейс для управления Docker.
@@ -38,7 +38,7 @@ Portainer состоит из двух компонентов:
 - 1 CPU, 512 MB RAM (минимально)
 - Открытые порты 9000 и/или 9443
 
-# Установка Portainer
+## Установка Portainer
 
 ```bash
 docker run -d \
@@ -50,8 +50,10 @@ docker run -d \
   --restart unless-stopped \
   portainer/portainer-ce:latest
 ```
+
 ![alt text](image.png)
-### Что означают аргументы
+
+## Что означают аргументы
 
 | Аргумент | Описание |
 |----------|----------|
@@ -69,7 +71,9 @@ docker run -d \
 ```url
 http://localhost:9000
 ```
+
 ![alt text](image-1.png)
+
 ## Полезные команды
 
 ```bash
@@ -84,5 +88,3 @@ docker rm portainer
 
 # Удаление с томом
 docker rm -v portainer
-```
-

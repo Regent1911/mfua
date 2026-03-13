@@ -1,4 +1,3 @@
-```markdown
 # Node.js в Docker
 
 ## О проекте
@@ -25,7 +24,9 @@ docker run --rm -it node:22
 # Запуск скрипта из файла
 docker run --rm -v $(pwd):/app -w /app node:22 node script.js
 ```
+
 ![alt text](image.png)
+
 ## Для приложения
 
 ```bash
@@ -98,7 +99,6 @@ docker exec my-app npm test
 ## npm ci vs npm install
 
 | Команда | Когда использовать |
-|---------|-------------------|
 | `npm ci` | Для продакшена (быстрее, строже) |
 | `npm install` | Для разработки (обновляет package-lock) |
 
@@ -108,5 +108,3 @@ docker exec my-app npm test
 - Всегда указывайте конкретную версию, не `latest`
 - Монтируйте `node_modules` как том при разработке
 - Для многоконтейнерных приложений используйте Docker Compose
-
-```
