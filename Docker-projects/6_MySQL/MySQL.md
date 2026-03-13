@@ -86,6 +86,7 @@ docker volume rm mysql_data
 ## Переменные окружения
 
 | Переменная | Назначение | Обязательная |
+|:----------|:----------|
 | `MYSQL_ROOT_PASSWORD` | Пароль для root | Да (или MYSQL_RANDOM_ROOT_PASSWORD) |
 | `MYSQL_RANDOM_ROOT_PASSWORD` | Сгенерировать случайный пароль | Альтернатива |
 | `MYSQL_DATABASE` | Создать БД при инициализации | Нет |

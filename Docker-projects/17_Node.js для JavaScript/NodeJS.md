@@ -99,6 +99,7 @@ docker exec my-app npm test
 ## npm ci vs npm install
 
 | Команда | Когда использовать |
+|:----------------|:---------|
 | `npm ci` | Для продакшена (быстрее, строже) |
 | `npm install` | Для разработки (обновляет package-lock) |
 

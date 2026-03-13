@@ -39,6 +39,7 @@ docker run -d \
 ### Что означают аргументы
 
 | Аргумент | Описание |
+|:----------|:----------|
 | `-d` | Запуск в фоновом режиме |
 | `--name adminer` | Имя контейнера |
 | `-p 8080:8080` | Проброс порта (веб-интерфейс) |
@@ -76,7 +77,12 @@ docker run -d \
 ```bash
 # Создать сеть
 docker network create db-network
+
+```
+
 ![alt text](image-1.png)
+
+```bash
 # Запустить MySQL
 docker run -d \
   --name mysql \
